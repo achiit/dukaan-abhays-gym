@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IronPulse Fitness – Demo Gym Website</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f6f4;--card:#fff;--text:#1b1b1f;--muted:#62626b;--accent:#e8541f;--accent-t:#fff;--dark:#16161a;--line:#e3e3df;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111114;--card:#1b1b20;--text:#f2f2f4;--muted:#a0a0aa;--accent:#ff6a33;--accent-t:#140a05;--dark:#0a0a0c;--line:#2c2c33;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111114;--card:#1b1b20;--text:#f2f2f4;--muted:#a0a0aa;--accent:#ff6a33;--accent-t:#140a05;--dark:#0a0a0c;--line:#2c2c33;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+.w{max-width:960px;margin:0 auto;padding:0 18px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-weight:800;letter-spacing:.5px;font-size:1.2rem}.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:.9rem}
+.hero{background:var(--dark);color:#f4f4f6;border-radius:20px;padding:44px 24px;margin-bottom:34px;background-image:linear-gradient(135deg,rgba(232,84,31,.35),transparent 55%)}
+.hero h1{font-size:clamp(2rem,7vw,3.2rem);line-height:1.1;margin:0 0 12px}
+.hero p{color:#c9c9d0;max-width:520px;margin:0 0 22px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-t);padding:13px 24px;border-radius:12px;font-weight:700;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+.btn.o{background:transparent;color:#fff;border:1px solid #555;margin-left:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:40px;text-align:center}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 6px}
+.stats b{display:block;font-size:1.5rem;color:var(--accent)}.stats span{font-size:.8rem;color:var(--muted)}
+h2{font-size:1.6rem;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 18px}
+section{margin-bottom:44px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 6px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.92rem}
+.ic{font-size:1.6rem;margin-bottom:6px}
+.price{font-size:2rem;font-weight:800}.price small{font-size:.9rem;color:var(--muted);font-weight:500}
+.card ul{padding-left:18px;color:var(--muted);font-size:.92rem;margin:10px 0 16px}
+.pop{border:2px solid var(--accent);position:relative}
+.pop::before{content:"Most popular";position:absolute;top:-11px;left:16px;background:var(--accent);color:var(--accent-t);font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:99px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:460px;background:var(--card);border-radius:14px;overflow:hidden}
+th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:.9rem}th{color:var(--muted);font-weight:600}
+form{display:grid;gap:10px;max-width:480px}
+input,select{padding:13px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:1rem;width:100%}
+.ok{color:var(--accent);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:20px 0 30px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="w">
+<nav><div class="logo">IRON<span>PULSE</span></div><div><a href="#programs">Programs</a><a href="#pricing">Pricing</a><a href="#join">Join</a></div></nav>
+
+<header class="hero">
+  <h1>Build the strongest version of you.</h1>
+  <p>Modern equipment, expert coaches and a community that pushes you. Your first 3 days are on us.</p>
+  <a class="btn" href="#join">Start free trial</a><a class="btn o" href="#pricing">See pricing</a>
+</header>
+
+<div class="stats"><div><b>1,200+</b><span>Members</span></div><div><b>15</b><span>Expert coaches</span></div><div><b>5am–11pm</b><span>Open daily</span></div></div>
+
+<section id="programs">
+  <h2>Programs</h2><p class="sub">Something for every goal and every level.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🏋️</div><h3>Strength Training</h3><p>Free weights, racks and guided plans to build muscle safely.</p></div>
+    <div class="card"><div class="ic">🔥</div><h3>Fat Loss</h3><p>Smart cardio and strength mix with nutrition guidance.</p></div>
+    <div class="card"><div class="ic">🧘</div><h3>Yoga & Mobility</h3><p>Improve flexibility, posture and recovery.</p></div>
+    <div class="card"><div class="ic">🥊</div><h3>HIIT & Boxing</h3><p>High-energy group classes that burn fast.</p></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Membership</h2><p class="sub">Simple pricing. No hidden fees.</p>
+  <div class="grid">
+    <div class="card"><h3>Basic</h3><div class="price">$29<small>/mo</small></div><ul><li>Gym floor access</li><li>Locker room</li><li>1 fitness assessment</li></ul><a class="btn" href="#join">Choose Basic</a></div>
+    <div class="card pop"><h3>Pro</h3><div class="price">$49<small>/mo</small></div><ul><li>Everything in Basic</li><li>Unlimited group classes</li><li>Custom workout plan</li></ul><a class="btn" href="#join">Choose Pro</a></div>
+    <div class="card"><h3>Elite</h3><div class="price">$89<small>/mo</small></div><ul><li>Everything in Pro</li><li>4 personal training sessions</li><li>Nutrition coaching</li></ul><a class="btn" href="#join">Choose Elite</a></div>
+  </div>
+</section>
+
+<section>
+  <h2>Class schedule</h2><p class="sub">Sample weekly timetable.</p>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>Mon / Wed</th><th>Tue / Thu</th><th>Sat</th></tr>
+    <tr><td>6:00 AM</td><td>HIIT</td><td>Yoga</td><td>Boxing</td></tr>
+    <tr><td>12:00 PM</td><td>Strength</td><td>Mobility</td><td>HIIT</td></tr>
+    <tr><td>6:30 PM</td><td>Boxing</td><td>Strength</td><td>Yoga</td></tr>
+  </table></div>
+</section>
+
+<section id="join">
+  <h2>Claim your free 3-day pass</h2><p class="sub">Leave your details and we’ll contact you today.</p>
+  <form id="f">
+    <input required placeholder="Full name">
+    <input required type="tel" placeholder="Phone number">
+    <select><option>Fat loss</option><option>Muscle gain</option><option>General fitness</option></select>
+    <button class="btn" type="submit">Get my free pass</button>
+    <div id="msg" class="ok" aria-live="polite"></div>
+  </form>
+</section>
+
+<footer>IronPulse Fitness · 123 Main Street, Houston, TX · (000) 000-0000<br>Demo website for illustration only.</footer>
+</div>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').textContent='Thanks! This is a demo, so no data was sent.';this.reset()});
+</script>
+</body>
+</html>
